@@ -1,0 +1,16 @@
+#counter {
+  font-size: 7em;
+  font-weight: 600;
+}
+
+.white {
+  color: var(--clr-white);
+}
+
+.red {
+  color: #bd1227;
+}
+
+.green {
+  color: #50c878;
+}

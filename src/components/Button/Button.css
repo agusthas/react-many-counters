@@ -1,0 +1,30 @@
+.btn {
+  text-transform: uppercase;
+  background: var(--bg-secondary);
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  font-size: 1.1rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  transform: scale(1);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.btn .icon {
+  transform: rotate(0deg);
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  transform: scale(1.1);
+}
+
+.btn:hover .icon {
+  transform: rotate(360deg);
+}

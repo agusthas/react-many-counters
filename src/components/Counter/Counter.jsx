@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaPlus, FaMinus, FaUndo } from 'react-icons/fa';
+import Buttons from '../Buttons/Buttons';
+import './Counter.css';
 
 const Counter = ({ incrementBy }) => {
   const [currentCount, setCurrentCount] = useState(0);
@@ -26,21 +27,7 @@ const Counter = ({ incrementBy }) => {
       >
         {currentCount}
       </span>
-      <div className='button-container'>
-        <div className='top'>
-          <button className='btn' onClick={reset}>
-            <FaUndo />
-          </button>
-        </div>
-        <div className='bottom'>
-          <button className='btn' onClick={minusClick}>
-            <FaMinus />
-          </button>
-          <button className='btn' onClick={plusClick}>
-            <FaPlus />
-          </button>
-        </div>
-      </div>
+      <Buttons reset={reset} plus={plusClick} minus={minusClick} />
     </>
   );
 };

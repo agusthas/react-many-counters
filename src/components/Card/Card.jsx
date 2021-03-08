@@ -1,5 +1,6 @@
 import React from 'react';
-import Counter from './Counter';
+import Counter from '../Counter/Counter';
+import './Card.css';
 
 const Card = ({ incrementBy }) => {
   return (
