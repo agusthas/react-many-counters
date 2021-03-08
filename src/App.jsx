@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './components/Card/Card';
 import './App.css';
 
 function App() {
+  const [increment, setIncrement] = useState([1, 5]);
+  const onAdd = (incrementValue) => {
+    setIncrement([...increment, incrementValue]);
+  };
+
   return (
     <div className='container'>
-      <Card incrementBy={1} />
-      <Card incrementBy={5} />
+      {increment.map((val, idx) => (
+        <Card key={idx} incrementBy={val} />
+      ))}
+      <Card isForm={true} onAdd={onAdd} />
     </div>
   );
 }
